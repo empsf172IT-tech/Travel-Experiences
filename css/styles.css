@@ -1,0 +1,195 @@
+/* ==========================================================================
+   VOYARA LUXURY TRAVEL — STYLESHEET
+   Curated Aesthetics, Editorial Typography & Interactive Refinements
+   ========================================================================== */
+
+/* Custom Variables */
+:root {
+  --color-midnight: #172A35;
+  --color-midnight-deep: #0E1C24;
+  --color-champagne: #D6B887;
+  --color-champagne-light: #DFC99F;
+  --color-ivory: #F5F0E8;
+  --color-ivory-warm: #FAF7F2;
+}
+
+/* Global Smoothness & Anti-aliasing */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E1C24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2B4A5D;
+  border-radius: 4px;
+  border: 2px solid #0E1C24;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D6B887;
+}
+
+/* Hero Vignette Overlay */
+.bg-radial-vignette {
+  background: radial-gradient(circle at center, transparent 30%, rgba(14, 28, 36, 0.85) 90%);
+}
+
+/* Slow Hero Zoom Animation */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-hero-zoom {
+  animation: heroZoom 24s ease-in-out infinite;
+}
+
+/* Navigation Link Underline Effect */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #D6B887;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #D6B887 !important;
+}
+
+/* Header transition classes */
+.header-scrolled {
+  background-color: rgba(23, 42, 53, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(214, 184, 135, 0.25) !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  box-shadow: 0 10px 30px -10px rgba(14, 28, 36, 0.5) !important;
+}
+
+html:not(.dark) .header-scrolled-light {
+  background-color: rgba(245, 240, 232, 0.96) !important;
+  border-bottom: 1px solid rgba(214, 184, 135, 0.35) !important;
+}
+
+html:not(.dark) .header-scrolled-light .nav-link {
+  color: #172A35 !important;
+}
+
+html:not(.dark) .header-scrolled-light .nav-link:hover {
+  color: #AD8951 !important;
+}
+
+html:not(.dark) .header-scrolled-light .header-title-text {
+  color: #172A35 !important;
+}
+
+/* Editorial Drop Caps and Accents */
+.editorial-quote::before {
+  content: '“';
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 4rem;
+  line-height: 0;
+  vertical-align: -1.2rem;
+  color: #D6B887;
+  margin-right: 0.5rem;
+}
+
+/* Subtle Shimmer for High-Priority Buttons */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.btn-shimmer:hover {
+  background-size: 200% auto;
+  animation: goldShimmer 2.5s linear infinite;
+}
+
+/* Card hover transitions */
+.destination-card img,
+.stay-card img {
+  will-change: transform;
+}
+
+/* Form input styling refinements */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: inherit;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Dedicated Voyara Footer Styling & Guaranteed Contrast */
+.voyara-footer {
+  background-color: #12222B !important;
+  color: #F5F0E8 !important;
+  border-top: 1px solid rgba(214, 184, 135, 0.35) !important;
+}
+
+.voyara-footer-brand-title {
+  color: #FFFFFF !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  letter-spacing: 0.22em !important;
+}
+
+.voyara-footer-emblem {
+  color: #D6B887 !important;
+  filter: drop-shadow(0 2px 8px rgba(214, 184, 135, 0.25));
+}
+
+.voyara-footer a {
+  transition: color 0.2s ease;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOYARA — Luxury Travel Experiences &amp; Bespoke Journeys</title>
+  <meta name="description" content="VOYARA curates extraordinary private journeys, exclusive boutique stays, and unforgettable luxury travel experiences across the world's most breathtaking destinations.">
+  <meta name="keywords" content="luxury travel, bespoke itineraries, boutique hotels, private villas, Maldives, Amalfi Coast, Kyoto, Swiss Alps">
+  
+  <!-- Favicon with VOYARA luxury emblem -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23172A35'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23D6B887' stroke-width='1.5' stroke-dasharray='3 2'/%3E%3Cpolygon points='32,12 36,28 52,32 36,36 32,52 28,36 12,32 28,28' fill='%23D6B887'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23F5F0E8'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Playfair Display (Serif), Cormorant Garamond, and Plus Jakarta Sans (Sans-serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS 3 CDN with custom config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              DEFAULT: '#172A35',
+              950: '#060E13',
+              900: '#0E1C24',
+              800: '#172A35',
+              700: '#213A48',
+              600: '#2B4A5D',
+            },
+            champagne: {
+              DEFAULT: '#D6B887',
+              50: '#FBF8F3',
+              100: '#F5EEDF',
+              200: '#EBDCBF',
+              300: '#DFC99F',
+              400: '#D6B887',
+              500: '#C5A36D',
+              600: '#AD8951',
+            },
+            ivory: {
+              DEFAULT: '#F5F0E8',
+              50: '#FCFAF7',
+              100: '#F5F0E8',
+              200: '#EAE1D2',
+              300: '#DDD1BD',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            luxury: '0.22em',
+            magazine: '0.15em',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles for Luxury Aesthetics & Micro-interactions -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-ivory text-midnight-800 dark:bg-midnight-900 dark:text-ivory font-sans antialiased selection:bg-champagne selection:text-midnight-900 transition-colors duration-500 overflow-x-hidden">
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-3 sm:py-5 bg-transparent border-b border-transparent">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+      
+      <!-- 1. Left: Brand Logo -->
+      <div class="flex-1 flex items-center justify-start min-w-0">
+        <a href="#hero" class="flex items-center gap-2 sm:gap-3.5 group flex-shrink-0" aria-label="VOYARA Home">
+          <div class="relative w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-champagne transform group-hover:rotate-45 transition-transform duration-700 ease-out" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 3" class="opacity-70"/>
+              <path d="M24 6L28 20L42 24L28 28L24 42L20 28L6 24L20 20Z" fill="currentColor"/>
+              <circle cx="24" cy="24" r="3" fill="#F5F0E8"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-lg sm:text-2xl tracking-widest sm:tracking-luxury font-semibold text-ivory dark:text-ivory header-title-text transition-colors">VOYARA</span>
+            <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-champagne font-medium -mt-1">Luxury Voyages</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- 2. Center: Desktop Navigation Links (Centered with balanced spacing) -->
+      <nav class="hidden lg:flex items-center justify-center gap-4 xl:gap-6 text-[11px] xl:text-xs uppercase tracking-[0.14em] font-medium flex-shrink-0 mr-4 lg:mr-8" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Home</a>
+        <a href="#destinations" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Destinations</a>
+        <a href="#experiences" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Experiences</a>
+        <a href="#trip-finder" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Inspiration</a>
+        <a href="#stays" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Stays</a>
+        <a href="#itineraries" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Itineraries</a>
+        <a href="#about" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">About</a>
+        <a href="#consultation" class="nav-link text-ivory hover:text-champagne transition-colors relative py-1">Contact</a>
+      </nav>
+
+      <!-- 3. Right: Action Items (Theme Toggle & Plan Journey CTA with generous left spacing) -->
+      <div class="flex-1 flex items-center justify-end gap-2.5 sm:gap-5 flex-shrink-0 pl-2 sm:pl-6 lg:pl-10 xl:pl-14">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-ivory hover:text-champagne border border-champagne/30 hover:border-champagne bg-midnight-900/40 backdrop-blur-md transition-all duration-300 flex-shrink-0 shadow-sm" aria-label="Toggle Light and Dark Mode">
+          <!-- Sun Icon (for Dark Mode) -->
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden text-champagne" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" stroke-width="2"/>
+            <path stroke-linecap="round" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <!-- Moon Icon (for Light Mode) -->
+          <svg id="theme-icon-moon" class="w-4 h-4 text-champagne" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#consultation" class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold tracking-magazine uppercase bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all duration-300 shadow-lg shadow-champagne/20 transform hover:-translate-y-0.5 whitespace-nowrap">
+          <span>Plan Your Journey</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-ivory border border-champagne/30 bg-midnight-900/40 backdrop-blur-md focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg id="hamburger-icon" class="w-4 h-4 sm:w-5 sm:h-5 text-champagne" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-4 h-4 sm:w-5 sm:h-5 text-champagne hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden px-6 pt-6 pb-8 bg-midnight-900/98 backdrop-blur-2xl border-b border-champagne/20 transition-all duration-300">
+      <nav class="flex flex-col space-y-4 text-sm uppercase tracking-luxury font-medium text-center">
+        <a href="#hero" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Home</a>
+        <a href="#destinations" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Destinations</a>
+        <a href="#experiences" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Experiences</a>
+        <a href="#trip-finder" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Inspiration Finder</a>
+        <a href="#stays" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Exceptional Stays</a>
+        <a href="#itineraries" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Curated Itineraries</a>
+        <a href="#about" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">The Voyara Way</a>
+        <a href="#gallery" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Visual Journal</a>
+        <a href="#slow-travel" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Slow Travel</a>
+        <a href="#why-voyara" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Why Voyara</a>
+        <a href="#testimonials" class="mobile-nav-link text-ivory hover:text-champagne py-2 border-b border-white/5">Fellow Explorers</a>
+        <a href="#consultation" class="mobile-nav-link text-champagne py-2 font-semibold">Plan Your Journey &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ==================== 1. HERO SECTION ==================== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-midnight-900 pt-20">
+    <!-- Background Image with Cinematic Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2400&q=85" 
+           alt="Amalfi Coast, Italy cliffside architecture overlooking turquoise sea" 
+           class="w-full h-full object-cover object-center transform scale-105 animate-hero-zoom filter brightness-90">
+      <!-- Sophisticated multi-gradient overlay for legible typography -->
+      <div class="absolute inset-0 bg-gradient-to-t from-midnight-900 via-midnight-900/60 to-midnight-900/40"></div>
+      <div class="absolute inset-0 bg-radial-vignette opacity-70"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center text-ivory py-20 sm:py-24 flex flex-col items-center">
+      
+      <!-- Editorial Location Badge -->
+      <div class="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full border border-champagne/40 bg-midnight-900/60 backdrop-blur-md mb-8 animate-fade-in-up max-w-[95%]">
+        <span class="w-1.5 h-1.5 rounded-full bg-champagne animate-ping flex-shrink-0"></span>
+        <span class="text-[10px] sm:text-[11px] uppercase tracking-wider sm:tracking-luxury text-champagne font-medium truncate">Amalfi Coast, Italy &bull; Curated Discovery</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-3xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-[1.08] font-normal mb-8 text-white drop-shadow-sm">
+        THE WORLD,<br>
+        <span class="italic font-light font-editorial text-champagne tracking-normal">Beyond Ordinary.</span>
+      </h1>
+
+      <!-- Supporting Editorial Subtitle -->
+      <p class="max-w-2xl mx-auto text-sm sm:text-lg md:text-xl text-ivory/90 font-light leading-relaxed mb-12">
+        Discover extraordinary places, exceptional stays, and journeys designed around the way you dream of travelling.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full max-w-md">
+        <a href="#destinations" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-luxury bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all duration-300 shadow-xl shadow-champagne/25 text-center transform hover:-translate-y-0.5">
+          Explore Destinations
+        </a>
+        <a href="#trip-finder" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-luxury border border-ivory/40 text-ivory hover:border-champagne hover:text-champagne backdrop-blur-sm transition-all duration-300 text-center">
+          Design Your Journey
+        </a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-12 w-full max-w-2xl text-center">
+        <div>
+          <span class="block font-serif text-xl sm:text-3xl font-semibold text-champagne">40+</span>
+          <span class="text-[9px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-ivory/70">Havens</span>
+        </div>
+        <div>
+          <span class="block font-serif text-xl sm:text-3xl font-semibold text-champagne">100%</span>
+          <span class="text-[9px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-ivory/70">Tailor-Made</span>
+        </div>
+        <div>
+          <span class="block font-serif text-xl sm:text-3xl font-semibold text-champagne">24/7</span>
+          <span class="text-[9px] sm:text-xs uppercase tracking-wider sm:tracking-luxury text-ivory/70">Concierge</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <a href="#destinations" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-ivory/70 hover:text-champagne transition-colors" aria-label="Scroll to Destinations">
+      <span class="text-[10px] uppercase tracking-luxury font-medium">Explore</span>
+      <div class="w-5 h-9 rounded-full border border-champagne/40 flex items-start justify-center p-1">
+        <div class="w-1 h-2 bg-champagne rounded-full animate-bounce"></div>
+      </div>
+    </a>
+  </section>
+
+
+  <!-- ==================== 2. EXTRAORDINARY DESTINATIONS ==================== -->
+  <section id="destinations" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Curated Sanctuary Portfolio</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory">
+          Explore Extraordinary Destinations
+        </h2>
+      </div>
+      <p class="max-w-md text-sm sm:text-base text-midnight-600 dark:text-ivory/80 leading-relaxed font-light">
+        Each haven in our portfolio is selected for its rare beauty, transcendent atmosphere, and deep sense of place.
+      </p>
+    </div>
+
+    <!-- Curated Destinations Grid (6 Destinations - Perfectly Balanced 3x2 Grid) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Destination 1: Amalfi Coast -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80" 
+             alt="Pastel buildings and coastal cliffs in Amalfi Coast, Italy" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          Mediterranean
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Italy</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Amalfi Coast</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Dramatic limestone cliffs cascading into cobalt blue waters, fragrant lemon groves, and private clifftop palazzo terraces overlooking Positano.
+          </p>
+          <button onclick="openDestinationModal('Amalfi Coast, Italy', 'Dramatic limestone cliffs cascading into cobalt blue waters, fragrant lemon groves, and private clifftop palazzo terraces overlooking Positano. Sail aboard a Riva yacht to secluded coves, enjoy private dining on cliffside balconies, and explore quiet vineyards suspended above the sea.', 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80', 'Mediterranean')" 
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination 2: Kyoto -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80" 
+             alt="Kyoto traditional pagoda and serene garden in Japan" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          East Asia
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Japan</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Kyoto</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Centuries of Zen aesthetics, private evening tea ceremonies, bamboo forest sanctuaries, and historic wooden ryokans.
+          </p>
+          <button onclick="openDestinationModal('Kyoto, Japan', 'Centuries of Zen aesthetics, private evening tea ceremonies, bamboo forest sanctuaries, and historic wooden ryokans. Experience exclusive access to centuries-old Zen temple gardens after twilight, guided seasonal kaiseki dining, and artisan pottery workshops in ancient Gion.', 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1000&q=80', 'East Asia')"
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination 3: Maldives -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1000&q=80" 
+             alt="Overwater bungalows surrounded by turquoise lagoon in Maldives" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          Indian Ocean
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Indian Ocean</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Maldives</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Endless turquoise atolls, bespoke stilted architecture over pristine coral gardens, and total oceanic seclusion.
+          </p>
+          <button onclick="openDestinationModal('Maldives', 'Endless turquoise atolls, bespoke stilted architecture over pristine coral gardens, and total oceanic seclusion. Enjoy private sandbank dinners under unpolluted night skies, subaquatic wine tastings, and marine biologist-guided manta ray encounters.', 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=1000&q=80', 'Indian Ocean')"
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination 4: Swiss Alps -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80" 
+             alt="Snow-capped alpine peaks and majestic glaciers in Switzerland" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          Europe
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Switzerland</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Swiss Alps</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Towering glaciated peaks, secluded timber chalets with roaring hearths, and panoramic scenic rail passages.
+          </p>
+          <button onclick="openDestinationModal('Swiss Alps, Switzerland', 'Towering glaciated peaks, secluded timber chalets with roaring hearths, and panoramic scenic rail passages. Heli-ski remote powder bowls, unwind in cedar-scented thermal spas overlooking the Matterhorn, and savor vintage wine pairings beside roaring fireplaces.', 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1200&q=80', 'Europe')"
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination 5: Marrakech -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&fit=crop&w=1200&q=80" 
+             alt="Ornate Moroccan riad courtyard with mosaic tiles and fountain" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          North Africa
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Morocco</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Marrakech</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Opulent riad courtyards scented with orange blossoms, private excursions into the Agafay Desert, and bespoke spice atelier explorations.
+          </p>
+          <button onclick="openDestinationModal('Marrakech, Morocco', 'Opulent riad courtyards scented with orange blossoms, private excursions into the Agafay Desert, and bespoke spice atelier explorations. Private access to historic palatial gardens, candlelit dinners beneath Saharan stars, and restorative hammam rituals using rare botanical oils.', 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?auto=format&fit=crop&w=1600&q=80', 'North Africa')"
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Destination 6: Bali -->
+      <div class="destination-card group relative rounded-2xl overflow-hidden shadow-xl bg-midnight-900 cursor-pointer h-[480px] flex flex-col justify-end">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80" 
+             alt="Emerald rice terraces and traditional Balinese architecture" 
+             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        <div class="absolute top-6 right-6 px-3.5 py-1.5 rounded-full bg-midnight-950/85 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne-300 font-semibold z-10 shadow-lg">
+          Southeast Asia
+        </div>
+        <div class="relative z-10 p-7 sm:p-8 flex flex-col justify-end text-white">
+          <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold mb-1 drop-shadow-md">Indonesia</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-medium mb-2 text-white drop-shadow-lg">Bali</h3>
+          <p class="text-white/95 text-sm line-clamp-2 mb-4 font-normal leading-relaxed drop-shadow-md">
+            Cascading emerald rice terraces, cliffside Uluwatu sanctuaries, spiritual water temples, and discreet rainforest pool estates.
+          </p>
+          <button onclick="openDestinationModal('Bali, Indonesia', 'Cascading emerald rice terraces, cliffside Uluwatu sanctuaries, spiritual water temples, and discreet rainforest pool estates. Private sound meditation with master healers, sunrise catamaran charters across the Nusa islands, and world-class culinary degustations nestled in lush jungle canopies.', 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2000&q=80', 'Southeast Asia')"
+                  class="inline-flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne-300 hover:text-white font-semibold transition-colors group-hover:underline drop-shadow-md">
+            <span>Discover Destination</span>
+            <svg class="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. EXTRAORDINARY TRAVEL EXPERIENCES ==================== -->
+  <section id="experiences" class="py-28 bg-midnight-800 text-ivory relative overflow-hidden">
+    <!-- Subtle gold accent glow in background -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-champagne/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Bespoke Pursuits</span>
+          <span class="w-8 h-[1px] bg-champagne"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight mb-6 text-white">
+          Extraordinary Travel Experiences
+        </h2>
+        <p class="text-ivory/80 text-base sm:text-lg font-light leading-relaxed">
+          Crafted for those who measure voyages not by miles covered, but by memories etched into the soul.
+        </p>
+      </div>
+
+      <!-- 4 Experience Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Experience 1 -->
+        <div class="group bg-midnight-900/70 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/50 transition-all duration-500 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" 
+                 alt="Private yacht anchored beside tropical island at sunset" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne">
+              Exclusive Access
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-serif text-xl font-normal text-white mb-2 group-hover:text-champagne transition-colors">
+                Private Island Retreats
+              </h3>
+              <p class="text-ivory/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                Total seclusion on uncharted archipelagos with dedicated personal stewards, helicopter transfers, and untouched pristine beaches.
+              </p>
+            </div>
+            <button onclick="openExperienceModal('Private Island Retreats', 'Step ashore where few have ever walked. Our Private Island Retreats grant you absolute dominion over private atolls in French Polynesia, the Seychelles, and the Indonesian archipelago. Enjoy private chef service, personal marine biologists, and bespoke starlit beach lounges arranged solely for your party.', 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80', ['Charter Seaplane Arrivals', 'Personal Butler & Head Chef', 'Private Bio-Luminescent Night Kayaking', 'Zero Footprint Conservation Access'])"
+                    class="w-full py-2.5 rounded-lg border border-champagne/30 text-champagne text-xs uppercase tracking-luxury font-medium hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Experience
+            </button>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="group bg-midnight-900/70 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/50 transition-all duration-500 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" 
+                 alt="Fine dining table set with artisanal wine and gourmet course" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne">
+              Epicurean
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-serif text-xl font-normal text-white mb-2 group-hover:text-champagne transition-colors">
+                Culinary Journeys
+              </h3>
+              <p class="text-ivory/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                Intimate cellar tastings with master vintners, foraging with Michelin-starred chefs, and private dinners in historic palaces.
+              </p>
+            </div>
+            <button onclick="openExperienceModal('Culinary Journeys', 'Embark on sensory expeditions led by world-class culinary icons. Gain rare access to multi-generational Tuscan wine estates, enjoy midnight tastings in Kyoto’s historic tea houses, and dine atop cliffside sea-grottos prepared by your personal Michelin chef.', 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80', ['Private Cellar Reserve Tastings', 'Direct Chef Masterclasses', 'Historic Palazzo Dining', 'Rare Truffle & Herb Foraging'])"
+                    class="w-full py-2.5 rounded-lg border border-champagne/30 text-champagne text-xs uppercase tracking-luxury font-medium hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Experience
+            </button>
+          </div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="group bg-midnight-900/70 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/50 transition-all duration-500 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" 
+                 alt="Rugged mountain ridges bathed in golden alpine glow" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne">
+              Expedition
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-serif text-xl font-normal text-white mb-2 group-hover:text-champagne transition-colors">
+                Wilderness Adventures
+              </h3>
+              <p class="text-ivory/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                Heli-hiking untouched alpine glaciers, privately guided wildlife safaris, and secluded luxury encampments beneath the aurora.
+              </p>
+            </div>
+            <button onclick="openExperienceModal('Wilderness Adventures', 'Confront the raw grandeur of nature with elite expedition guides and unparalleled luxury comforts. Fly deep into Patagonian fjords, traverse Icelandic ice caves with your own glaciologist, or unwind in heated glass domes in Finnish Lapland watching the Northern Lights.', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80', ['Heli-Glacier Trekking', 'Expedition-Grade Private Safari', 'Aurora Borealis Glass Lodges', '24/7 Field Doctor & Expert Guide'])"
+                    class="w-full py-2.5 rounded-lg border border-champagne/30 text-champagne text-xs uppercase tracking-luxury font-medium hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Experience
+            </button>
+          </div>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="group bg-midnight-900/70 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/50 transition-all duration-500 flex flex-col">
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80" 
+                 alt="Intricate historical architectural archway in golden morning light" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md border border-champagne/40 text-[10px] uppercase tracking-luxury text-champagne">
+              Heritage
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-serif text-xl font-normal text-white mb-2 group-hover:text-champagne transition-colors">
+                Cultural Immersions
+              </h3>
+              <p class="text-ivory/70 text-xs sm:text-sm font-light leading-relaxed mb-6">
+                After-hours museum visits, private audiences with master artisans, and spiritual rituals in sacred heritage sanctuaries.
+              </p>
+            </div>
+            <button onclick="openExperienceModal('Cultural Immersions', 'Gain access beyond velvet ropes and locked sanctuary doors. Experience private viewings of the Vatican after public hours, learn centuries-old sword-forging from Japanese living national treasures, and partake in private sunrise blessings inside ancient Angkor Wat.', 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80', ['After-Hours Heritage Access', 'Master Artisan Apprenticeships', 'Private Temple Blessings', 'Archival Historian Companionship'])"
+                    class="w-full py-2.5 rounded-lg border border-champagne/30 text-champagne text-xs uppercase tracking-luxury font-medium hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Experience
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 4. INTERACTIVE INSPIRATION FINDER ==================== -->
+  <section id="trip-finder" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto relative overflow-hidden">
+    <div class="bg-gradient-to-br from-ivory-50 to-ivory-200 dark:from-midnight-800 dark:to-midnight-900 border border-champagne/30 rounded-3xl p-5 sm:p-10 lg:p-16 shadow-2xl relative overflow-hidden">
+      
+      <!-- Decorative Emblem Watermark -->
+      <div class="hidden sm:block absolute -right-16 -bottom-16 w-80 h-80 opacity-5 pointer-events-none">
+        <svg viewBox="0 0 100 100" class="w-full h-full text-champagne" fill="currentColor">
+          <polygon points="50,10 60,40 90,50 60,60 50,90 40,60 10,50 40,40"/>
+        </svg>
+      </div>
+
+      <div class="max-w-3xl mb-12">
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Bespoke Voyage Selector</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory mb-4">
+          Find Your Perfect Journey
+        </h2>
+        <p class="text-midnight-600 dark:text-ivory/80 text-sm sm:text-base font-light">
+          Select your travel sensibilities below. Our algorithmic curation instantly reveals the destination tailored to your rhythm and aesthetic.
+        </p>
+      </div>
+
+      <!-- Interactive Filter Controls -->
+      <form id="inspiration-form" class="space-y-8" onsubmit="event.preventDefault(); findTripEscape();">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Option 1: Travel Mood -->
+          <div class="flex flex-col">
+            <label for="filter-mood" class="h-6 text-xs uppercase tracking-luxury font-semibold text-midnight-800 dark:text-ivory mb-2.5 flex items-center whitespace-nowrap">
+              <span>1. Travel Mood <span class="text-champagne-600 dark:text-champagne font-bold">*</span></span>
+            </label>
+            <div class="relative">
+              <select id="filter-mood" required class="w-full h-12 appearance-none bg-white/80 dark:bg-midnight-900 border border-champagne/40 rounded-xl px-4 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer shadow-sm">
+                <option value="" disabled selected>Select Travel Mood</option>
+                <option value="relaxation">Relaxation &amp; Restoration</option>
+                <option value="adventure">High Adventure &amp; Thrills</option>
+                <option value="romance">Romance &amp; Intimacy</option>
+                <option value="culture">Art, Culture &amp; Heritage</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-champagne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Option 2: Destination Style -->
+          <div class="flex flex-col">
+            <label for="filter-style" class="h-6 text-xs uppercase tracking-luxury font-semibold text-midnight-800 dark:text-ivory mb-2.5 flex items-center whitespace-nowrap">
+              <span>2. Destination Style <span class="text-champagne-600 dark:text-champagne font-bold">*</span></span>
+            </label>
+            <div class="relative">
+              <select id="filter-style" required class="w-full h-12 appearance-none bg-white/80 dark:bg-midnight-900 border border-champagne/40 rounded-xl px-4 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer shadow-sm">
+                <option value="" disabled selected>Select Landscape</option>
+                <option value="beach">Idyllic Beach &amp; Coast</option>
+                <option value="mountains">Majestic Mountains</option>
+                <option value="countryside">Serene Countryside</option>
+                <option value="city">Historic &amp; Cosmopolitan City</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-champagne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Option 3: Travel Duration -->
+          <div class="flex flex-col">
+            <label for="filter-duration" class="h-6 text-xs uppercase tracking-luxury font-semibold text-midnight-800 dark:text-ivory mb-2.5 flex items-center whitespace-nowrap">
+              <span>3. Duration <span class="text-champagne-600 dark:text-champagne font-bold">*</span></span>
+            </label>
+            <div class="relative">
+              <select id="filter-duration" required class="w-full h-12 appearance-none bg-white/80 dark:bg-midnight-900 border border-champagne/40 rounded-xl px-4 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer shadow-sm">
+                <option value="" disabled selected>Select Length of Stay</option>
+                <option value="weekend">Extended Weekend (3–4 Days)</option>
+                <option value="5-7">Signature Stay (5–7 Days)</option>
+                <option value="10-14">Grand Expedition (10–14 Days)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-champagne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Option 4: Budget Tier -->
+          <div class="flex flex-col">
+            <label for="filter-budget" class="h-6 text-xs uppercase tracking-luxury font-semibold text-midnight-800 dark:text-ivory mb-2.5 flex items-center whitespace-nowrap">
+              <span>4. Budget Tier <span class="text-champagne-600 dark:text-champagne font-bold">*</span></span>
+            </label>
+            <div class="relative">
+              <select id="filter-budget" required class="w-full h-12 appearance-none bg-white/80 dark:bg-midnight-900 border border-champagne/40 rounded-xl px-4 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer shadow-sm">
+                <option value="" disabled selected>Select Budget Tier</option>
+                <option value="premium">Premium Curated</option>
+                <option value="luxury">Luxury Elite</option>
+                <option value="ultra-luxury">Ultra-Luxury Bespoke</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-champagne">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Buttons and Feedback Notification -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+          <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-full text-xs font-semibold uppercase tracking-luxury bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all duration-300 shadow-xl shadow-champagne/25 flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <span>Find My Escape</span>
+          </button>
+          
+          <button type="button" onclick="resetInspirationForm()" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-luxury border border-midnight-800/20 dark:border-ivory/20 text-midnight-800 dark:text-ivory hover:border-champagne hover:text-champagne transition-all text-center">
+            Reset Criteria
+          </button>
+
+          <span class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-champagne-100 dark:bg-midnight-950/80 border border-champagne-500/50 dark:border-champagne/40 text-[11px] uppercase tracking-luxury text-midnight-900 dark:text-champagne-200 font-semibold ml-auto shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-champagne-600 dark:bg-champagne animate-pulse"></span>
+            <span>All 4 criteria required</span>
+          </span>
+
+          <span id="finder-feedback-message" class="text-xs text-rose-500 font-medium hidden">
+            Please make a selection in all four criteria before generating your recommendation.
+          </span>
+        </div>
+
+      </form>
+
+      <!-- Dynamic Recommendation Display Container -->
+      <div id="inspiration-result" class="mt-12 hidden transition-all duration-700 animate-fade-in-up">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. EXCEPTIONAL STAYS ==================== -->
+  <section id="stays" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Sanctuaries of Distinction</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory">
+          Exceptional Stays
+        </h2>
+      </div>
+      <p class="max-w-md text-sm sm:text-base text-midnight-600 dark:text-ivory/80 leading-relaxed font-light">
+        Curated accommodation inspiration designed to immerse you in supreme comfort, architectural mastery, and breathtaking surroundings.
+      </p>
+    </div>
+
+    <!-- 4 Properties Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Stay 1 -->
+      <div class="group bg-white dark:bg-midnight-800 border border-champagne/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" 
+               alt="Luxury overwater villa in Maldives with private plunge pool" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md text-[10px] text-champagne tracking-luxury uppercase">
+            Maldives
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-luxury text-champagne font-semibold block mb-1 h-5 flex items-center">Overwater Sanctuary</span>
+            <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3 h-14 flex items-start leading-snug">
+              <span>Overwater Villas</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/80 font-light leading-relaxed mb-4 min-h-[115px]">
+              Cantilevered over crystalline turquoise lagoons with glass floor observatories, private infinity plunge pools, and direct ocean access.
+            </p>
+            <!-- Highlights -->
+            <ul class="space-y-1.5 mb-6 text-[11px] text-midnight-700 dark:text-ivory/80 border-t border-b border-champagne/15 py-3 min-h-[96px] flex flex-col justify-center">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Private Horizon Plunge Pool</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>24-Hour Island Concierge</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Subsea Reef Snorkeling Deck</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openStayModal('Overwater Villas in Maldives', 'Perched gently above turquoise waters, these villas combine effortless barefoot luxury with refined tropical craftsmanship. Awaken to the rhythmic murmur of ocean tides, dine on floating breakfasts delivered to your terrace, and stargaze through retractable ceiling pavilions.', 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80', 'Indian Ocean Coral Atolls', ['Glass Ocean-Floor Lounges', 'Private Catamaran Transfers', 'Hydrotherapy Spa Facilities', 'Solar-Assisted Architecture'])"
+                  class="w-full py-3 rounded-xl bg-midnight-800 dark:bg-midnight-700 text-ivory hover:bg-champagne hover:text-midnight-900 text-xs uppercase tracking-luxury font-medium transition-all text-center mt-auto shadow-sm">
+            Explore Stay
+          </button>
+        </div>
+      </div>
+
+      <!-- Stay 2 -->
+      <div class="group bg-white dark:bg-midnight-800 border border-champagne/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" 
+               alt="Cliffside boutique terrace overlooking Mediterranean sea" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md text-[10px] text-champagne tracking-luxury uppercase">
+            Italy
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-luxury text-champagne font-semibold block mb-1 h-5 flex items-center">Historic Palazzo</span>
+            <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3 h-14 flex items-start leading-snug">
+              <span>Cliffside Boutique Hotels</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/80 font-light leading-relaxed mb-4 min-h-[115px]">
+              Restored 18th-century palazzos carved into coastal volcanic stone, featuring fragrant bougainvillea pergolas and sunset spritz bars.
+            </p>
+            <!-- Highlights -->
+            <ul class="space-y-1.5 mb-6 text-[11px] text-midnight-700 dark:text-ivory/80 border-t border-b border-champagne/15 py-3 min-h-[96px] flex flex-col justify-center">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Panoramic Sea-View Terraces</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Private Boat Landing Funicular</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Artisan Terracotta &amp; Frescoes</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openStayModal('Cliffside Boutique Hotels in Italy', 'Gracefully clinging to the dramatic cliffs of the Amalfi shoreline, these boutique palazzos are steeped in timeless Mediterranean romance. Enjoy sun-drenched terrace breakfasts, bespoke Riva boat excursions from the private sea cove, and evening aperitivos accompanied by classical mandolins.', 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80', 'Positano & Amalfi Coast, Italy', ['Restored Historic Architecture', 'Private Wine Tasting Cantinas', 'Direct Cove Sea Access', 'Terrace Lemon Groves'])"
+                  class="w-full py-3 rounded-xl bg-midnight-800 dark:bg-midnight-700 text-ivory hover:bg-champagne hover:text-midnight-900 text-xs uppercase tracking-luxury font-medium transition-all text-center mt-auto shadow-sm">
+            Explore Stay
+          </button>
+        </div>
+      </div>
+
+      <!-- Stay 3 -->
+      <div class="group bg-white dark:bg-midnight-800 border border-champagne/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" 
+               alt="Luxury wooden alpine chalet with snow mountains in background" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md text-[10px] text-champagne tracking-luxury uppercase">
+            Switzerland
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-luxury text-champagne font-semibold block mb-1 h-5 flex items-center">Alpine Sanctuary</span>
+            <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3 h-14 flex items-start leading-snug">
+              <span>Alpine Chalets</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/80 font-light leading-relaxed mb-4 min-h-[115px]">
+              Private timber sanctuaries in the shadow of majestic 4,000-meter peaks, equipped with outdoor hot tubs, cedar saunas, and private chefs.
+            </p>
+            <!-- Highlights -->
+            <ul class="space-y-1.5 mb-6 text-[11px] text-midnight-700 dark:text-ivory/80 border-t border-b border-champagne/15 py-3 min-h-[96px] flex flex-col justify-center">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Ski-In / Ski-Out Alpine Access</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Cedar-Scented Finnish Spa</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Open Hearth Fireplace Lounge</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openStayModal('Alpine Chalets in Switzerland', 'Combining time-honored Swiss craftsmanship with lavish contemporary amenities, these private chalets offer an alpine sanctuary like no other. Return from private powder descents to roaring stone fireplaces, hot mulled wine, and treatments in your private wellness pavilion.', 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80', 'Zermatt & St. Moritz, Switzerland', ['Private Ski Guide On-Call', 'Heated Outdoor Whirlpools', 'Reclaimed Pine & Granite Finish', 'Private Fondue & Fondant Service'])"
+                  class="w-full py-3 rounded-xl bg-midnight-800 dark:bg-midnight-700 text-ivory hover:bg-champagne hover:text-midnight-900 text-xs uppercase tracking-luxury font-medium transition-all text-center mt-auto shadow-sm">
+            Explore Stay
+          </button>
+        </div>
+      </div>
+
+      <!-- Stay 4 -->
+      <div class="group bg-white dark:bg-midnight-800 border border-champagne/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" 
+               alt="Private tropical villa with swimming pool surrounded by lush garden" 
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+          <div class="absolute bottom-3 left-3 px-3 py-1 rounded-full bg-midnight-900/80 backdrop-blur-md text-[10px] text-champagne tracking-luxury uppercase">
+            Bali
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow justify-between">
+          <div>
+            <span class="text-[10px] uppercase tracking-luxury text-champagne font-semibold block mb-1 h-5 flex items-center">Tropical Estate</span>
+            <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3 h-14 flex items-start leading-snug">
+              <span>Private Villas</span>
+            </h3>
+            <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/80 font-light leading-relaxed mb-4 min-h-[115px]">
+              Jungle-fringed pavilions and clifftop estates surrounded by sacred frangipani blossoms, private yoga shalas, and infinity pools.
+            </p>
+            <!-- Highlights -->
+            <ul class="space-y-1.5 mb-6 text-[11px] text-midnight-700 dark:text-ivory/80 border-t border-b border-champagne/15 py-3 min-h-[96px] flex flex-col justify-center">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Open-Air Rainforest Living</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Private Resident Yoga Instructor</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-champagne flex-shrink-0"></span>
+                <span>Lush Ravine Infinity Edge</span>
+              </li>
+            </ul>
+          </div>
+          <button onclick="openStayModal('Private Villas in Bali', 'Concealed amidst lush canopies in Ubud or perched high above the Indian Ocean in Uluwatu, these secluded estate villas offer sublime spiritual peace. Featuring hand-carved teak woodwork, private koi ponds, and restorative Ayurvedic spa treatments delivered in your garden gazebo.', 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80', 'Ubud & Uluwatu, Indonesia', ['Private Spa Treatment Pavilions', 'Organic Farm-to-Table Kitchen', 'Personal Chauffeur & SUV', 'Traditional Temple Blessing Ceremonies'])"
+                  class="w-full py-3 rounded-xl bg-midnight-800 dark:bg-midnight-700 text-ivory hover:bg-champagne hover:text-midnight-900 text-xs uppercase tracking-luxury font-medium transition-all text-center mt-auto shadow-sm">
+            Explore Stay
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 6. JOURNEYS WORTH REMEMBERING ==================== -->
+  <section id="itineraries" class="py-28 bg-midnight-900 text-ivory relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Signature Routes</span>
+          <span class="w-8 h-[1px] bg-champagne"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight mb-6 text-white">
+          Journeys Worth Remembering
+        </h2>
+        <p class="text-ivory/80 text-base sm:text-lg font-light leading-relaxed">
+          Paced to perfection, seamlessly connected by private charters, and enriched by rare behind-the-scenes encounters.
+        </p>
+      </div>
+
+      <!-- 3 Itinerary Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Itinerary 1 -->
+        <div class="bg-midnight-800/80 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/40 transition-all duration-500 flex flex-col group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" 
+                 alt="Mediterranean coastal road with classic car and ocean views" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/90 text-[10px] tracking-luxury uppercase text-champagne border border-champagne/30">
+              Itinerary 01
+            </div>
+            <div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-champagne text-midnight-900 font-semibold text-xs uppercase tracking-magazine">
+              7 Days
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne mb-2">
+                <span>Destination: Italy</span>
+                <span>&bull;</span>
+                <span>7 Days</span>
+              </div>
+              <h3 class="font-serif text-2xl font-normal text-white mb-3 group-hover:text-champagne transition-colors">
+                Mediterranean Elegance
+              </h3>
+              <p class="text-ivory/70 text-sm font-light leading-relaxed mb-6">
+                A sun-soaked odyssey tracing the rugged cliffs of Amalfi and Capri. Sail secluded sea arches, enjoy private lemon orchard dining, and rest in historic cliffside palazzos.
+              </p>
+              
+              <!-- Key Highlights -->
+              <div class="space-y-2 mb-8">
+                <div class="text-[11px] uppercase tracking-luxury text-ivory/50 font-semibold">Curated Highlights</div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Private Riva boat excursion along Faraglioni</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>After-hours wine tasting in Ravello cellars</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Helicopter transfer over the Bay of Naples</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Exclusive cliffside suite reservations in Positano</span>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="openItineraryModal('Mediterranean Elegance', 'Italy', '7 Days', 'A sun-soaked odyssey tracing the rugged cliffs of Amalfi and Capri. Sail secluded sea arches, enjoy private lemon orchard dining, and rest in historic cliffside palazzos.', 'https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80', [
+              {day: 'Day 1-2', title: 'Arrival in Naples & Private Transfer to Ravello', desc: 'Private helicopter transfer to Ravello. Unwind in your clifftop villa overlooking the sea with a welcome vintage prosecco reception.'},
+              {day: 'Day 3-4', title: 'Capri Yacht Charter & Blue Grotto by Twilight', desc: 'Board a custom Riva Dolceriva for a private island cruise to Capri. Exclusive after-hours swim in private sea caves followed by dinner at a lemon-canopied trattoria.'},
+              {day: 'Day 5-6', title: 'Positano Coastal Trails & Artisanal Gastronomy', desc: 'Guided morning walk along the Path of the Gods with an artisanal cheese tasting, followed by an evening cooking masterclass inside a private 17th-century palazzo.'},
+              {day: 'Day 7', title: 'Leisurely Departure via Sunset Sail', desc: 'Final morning espresso on your private sea balcony before private chauffeur transfer to Naples or Rome.'}
+            ])"
+                    class="w-full py-3 rounded-xl border border-champagne/40 text-champagne text-xs uppercase tracking-luxury font-semibold hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Itinerary
+            </button>
+          </div>
+        </div>
+
+        <!-- Itinerary 2 -->
+        <div class="bg-midnight-800/80 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/40 transition-all duration-500 flex flex-col group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" 
+                 alt="Kyoto traditional wooden temple with lantern in autumn" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/90 text-[10px] tracking-luxury uppercase text-champagne border border-champagne/30">
+              Itinerary 02
+            </div>
+            <div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-champagne text-midnight-900 font-semibold text-xs uppercase tracking-magazine">
+              8 Days
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne mb-2">
+                <span>Destination: Japan</span>
+                <span>&bull;</span>
+                <span>8 Days</span>
+              </div>
+              <h3 class="font-serif text-2xl font-normal text-white mb-3 group-hover:text-champagne transition-colors">
+                Japan in Stillness
+              </h3>
+              <p class="text-ivory/70 text-sm font-light leading-relaxed mb-6">
+                A contemplative voyage through ancient Kyoto and serene mountain valleys. Discover secluded Zen gardens, private tea ceremonies, and restorative natural onsen waters.
+              </p>
+              
+              <!-- Key Highlights -->
+              <div class="space-y-2 mb-8">
+                <div class="text-[11px] uppercase tracking-luxury text-ivory/50 font-semibold">Curated Highlights</div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Private tea ceremony with a 15th-generation Grand Master</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Exclusive sunrise access to Arashiyama Bamboo Grove</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Two nights in a secluded sukiya-style heritage ryokan</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Nighttime lantern strolls through historic preservation quarters</span>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="openItineraryModal('Japan in Stillness', 'Japan', '8 Days', 'A contemplative voyage through ancient Kyoto and serene mountain valleys. Discover secluded Zen gardens, private tea ceremonies, and restorative natural onsen waters.', 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80', [
+              {day: 'Day 1-2', title: 'Arrival in Kyoto & Sukiya Ryokan Sanctuary', desc: 'Private greeting at Kansai or Kyoto station. Settle into your handcrafted wooden suite overlooking private Japanese moss gardens.'},
+              {day: 'Day 3-4', title: 'The Zen of Tea & Hidden Temple Cloisters', desc: 'Private dawn meditation at Daitoku-ji with an elder monk, followed by a customized Uji matcha tasting.'},
+              {day: 'Day 5-6', title: 'Bamboo Grooves & Historic Gion by Lantern Light', desc: 'Sunrise stroll before the public arrives in Arashiyama. Evening culinary discovery of multi-course seasonal kaiseki with Geiko performing arts.'},
+              {day: 'Day 7-8', title: 'Mountain Onsen Retreat in Hakone', desc: 'Private Shinkansen first-class transfer to thermal volcanic springs in Hakone with views of Mount Fuji.'}
+            ])"
+                    class="w-full py-3 rounded-xl border border-champagne/40 text-champagne text-xs uppercase tracking-luxury font-semibold hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Itinerary
+            </button>
+          </div>
+        </div>
+
+        <!-- Itinerary 3 -->
+        <div class="bg-midnight-800/80 border border-white/10 rounded-2xl overflow-hidden hover:border-champagne/40 transition-all duration-500 flex flex-col group">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=800&q=80" 
+                 alt="Scenic panoramic train journey winding through Swiss mountain pass" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-midnight-900/90 text-[10px] tracking-luxury uppercase text-champagne border border-champagne/30">
+              Itinerary 03
+            </div>
+            <div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-champagne text-midnight-900 font-semibold text-xs uppercase tracking-magazine">
+              6 Days
+            </div>
+          </div>
+          <div class="p-8 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center gap-2 text-xs uppercase tracking-luxury text-champagne mb-2">
+                <span>Destination: Switzerland</span>
+                <span>&bull;</span>
+                <span>6 Days</span>
+              </div>
+              <h3 class="font-serif text-2xl font-normal text-white mb-3 group-hover:text-champagne transition-colors">
+                Alpine Escape
+              </h3>
+              <p class="text-ivory/70 text-sm font-light leading-relaxed mb-6">
+                An exhilarating traverse across the pristine Swiss cantons. Experience panoramic glass-domed train carriages, private glacier flights, and evenings in timbered chalets.
+              </p>
+              
+              <!-- Key Highlights -->
+              <div class="space-y-2 mb-8">
+                <div class="text-[11px] uppercase tracking-luxury text-ivory/50 font-semibold">Curated Highlights</div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Excellence Class panoramic rail across the Glacier Express</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Helicopter flight over the Matterhorn with snow landing</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Private thermal spa sessions under snow-covered peaks</span>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-ivory/90">
+                  <span class="w-1.5 h-1.5 rounded-full bg-champagne"></span>
+                  <span>Artisanal Valais wine and fondue cellar pairing</span>
+                </div>
+              </div>
+            </div>
+
+            <button onclick="openItineraryModal('Alpine Escape', 'Switzerland', '6 Days', 'An exhilarating traverse across the pristine Swiss cantons. Experience panoramic glass-domed train carriages, private glacier flights, and evenings in timbered chalets.', 'https://images.unsplash.com/photo-1502784444187-359ac186c5bb?auto=format&fit=crop&w=1200&q=80', [
+              {day: 'Day 1-2', title: 'Zurich to Zermatt & Matterhorn View Chalet', desc: 'Scenic private rail to car-free Zermatt. Settle into your penthouse chalet facing the iconic peak with private fireside dining.'},
+              {day: 'Day 3', title: 'Helicopter Glacier Landing & Haute Fondue', desc: 'Helicopter flight above towering séracs and mountain ridges. Landing on glacier snow for champagne and mountain-foraged fondue.'},
+              {day: 'Day 4-5', title: 'Glacier Express Excellence Class to St. Moritz', desc: 'Indulge in a 5-course gastronomic journey aboard the Glacier Express with dedicated concierges and sweeping panoramic glass ceilings.'},
+              {day: 'Day 6', title: 'Alpine Spa Sanctuary & Departure', desc: 'Morning herbal detox treatment at Badrutt’s Palace spa overlooking Lake St. Moritz before private airport transfer.'}
+            ])"
+                    class="w-full py-3 rounded-xl border border-champagne/40 text-champagne text-xs uppercase tracking-luxury font-semibold hover:bg-champagne hover:text-midnight-900 transition-all text-center">
+              Explore Itinerary
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 7. TRAVEL YOUR WAY ==================== -->
+  <section id="about" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Visual Column (Editorial Layered Photography) -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-midnight-900">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80" 
+               alt="Serene crystal clear lake reflecting mountain ridges with person on canoe" 
+               class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-900/60 via-transparent to-transparent"></div>
+        </div>
+        
+        <!-- Overlaid Secondary Image Card -->
+        <div class="hidden sm:block absolute -bottom-8 -right-8 z-20 w-3/5 rounded-2xl overflow-hidden shadow-2xl border-4 border-ivory dark:border-midnight-900 aspect-[4/3] bg-midnight-900">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" 
+               alt="Untouched sandy beach with clear azure waves" 
+               class="w-full h-full object-cover">
+        </div>
+
+        <!-- Floating Brand Pill -->
+        <div class="absolute top-8 left-8 z-20 px-4 py-2 rounded-full bg-midnight-900/80 backdrop-blur-md border border-champagne/40 text-ivory text-xs font-serif tracking-wider">
+          Voyara Signature Method
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="lg:col-span-6 flex flex-col justify-center">
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-4">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Bespoke Travel Philosophy</span>
+        </div>
+        
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory mb-6 leading-tight">
+          Travel Your Way.<br>
+          <span class="italic font-editorial font-light text-champagne">Without Compromise.</span>
+        </h2>
+
+        <p class="text-midnight-600 dark:text-ivory/80 text-base sm:text-lg font-light leading-relaxed mb-10">
+          True luxury is never templated. We listen to the subtle desires behind your travels, fashioning journeys that mirror your private sense of wonder, comfort, and pace.
+        </p>
+
+        <!-- 3 Pillars -->
+        <div class="space-y-8 mb-12">
+          
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/15 border border-champagne/40 flex items-center justify-center flex-shrink-0 mt-1 text-champagne">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-medium text-midnight-800 dark:text-ivory mb-1">Bespoke Journeys</h3>
+              <p class="text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+                Travel plans tailored entirely to individual interests, preferred pace, and personal travel goals. No shared schedules, no rigid formulas.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/15 border border-champagne/40 flex items-center justify-center flex-shrink-0 mt-1 text-champagne">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-medium text-midnight-800 dark:text-ivory mb-1">Exceptional Stays</h3>
+              <p class="text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+                Carefully selected accommodation inspiration, from secluded clifftop villas to historic castle suites and architect-designed overwater estates.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/15 border border-champagne/40 flex items-center justify-center flex-shrink-0 mt-1 text-champagne">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-lg font-medium text-midnight-800 dark:text-ivory mb-1">Meaningful Experiences</h3>
+              <p class="text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+                Thoughtfully curated activities that connect travelers intimately with local culture, pristine wilderness, artisanal cuisine, and authentic heritage.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <a href="#consultation" class="inline-flex items-center gap-2 px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-luxury bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all duration-300 shadow-xl shadow-champagne/20">
+            <span>Create My Journey</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 8. A WORLD OF POSSIBILITIES (GALLERY) ==================== -->
+  <section id="gallery" class="py-28 bg-midnight-950 text-ivory">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+            <span class="w-8 h-[1px] bg-champagne"></span>
+            <span>Visual Journal</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-white">
+            A World of Possibilities
+          </h2>
+        </div>
+        <p class="max-w-md text-sm text-ivory/70 font-light leading-relaxed">
+          An editorial collage celebrating the sensory symphony of international luxury travel. Click any photograph to view in high-resolution detail.
+        </p>
+      </div>
+
+      <!-- Asymmetrical Editorial Gallery Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Photo 1: Tropical Beach -->
+        <div class="group relative rounded-2xl overflow-hidden bg-midnight-900 aspect-[4/5] cursor-pointer shadow-xl" 
+             onclick="openGalleryModal('Tropical Beach Sanctuaries', 'Untouched white sand shores in French Polynesia, where calm lagoon waters shimmer under the equatorial sun.', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85')">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" 
+               alt="Pristine tropical beach with white sand and turquoise water" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 right-6 z-10 text-white">
+            <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold block mb-1 drop-shadow-md">Coast &amp; Atolls</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-white font-medium mb-1 drop-shadow-lg">Tropical Beaches</h3>
+            <p class="text-xs sm:text-sm text-white/95 font-normal line-clamp-2 leading-relaxed drop-shadow-md">Untouched white sand shores framed by swaying palms.</p>
+          </div>
+        </div>
+
+        <!-- Photo 2: Mountain Landscapes -->
+        <div class="group relative rounded-2xl overflow-hidden bg-midnight-900 aspect-[4/5] sm:aspect-auto lg:row-span-2 cursor-pointer shadow-xl lg:min-h-[440px]"
+             onclick="openGalleryModal('Majestic Alpine Summits', 'Glacier-carved spires and emerald valleys in the Swiss Alps, accessed via private scenic charters.', 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85')">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" 
+               alt="Majestic mountain ranges illuminated by sunrise alpine glow" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div class="absolute bottom-8 left-8 right-8 z-10 text-white">
+            <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold block mb-1 drop-shadow-md">Alpine Wilderness</span>
+            <h3 class="font-serif text-2xl sm:text-3xl text-white font-medium mb-2 drop-shadow-lg">Mountain Landscapes</h3>
+            <p class="text-sm sm:text-base text-white/95 font-normal leading-relaxed drop-shadow-md">Glacier-carved spires and tranquil valleys bathed in morning gold.</p>
+          </div>
+        </div>
+
+        <!-- Photo 3: Boutique Hotel Interiors -->
+        <div class="group relative rounded-2xl overflow-hidden bg-midnight-900 aspect-[4/5] cursor-pointer shadow-xl"
+             onclick="openGalleryModal('Artisan Hotel Interiors', 'Masterful bespoke interior architecture in Kyoto, where minimalist lines meet centuries of handcrafted heritage.', 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1600&q=85')">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" 
+               alt="Luxury boutique suite with minimalist wood design and panoramic terrace" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 right-6 z-10 text-white">
+            <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold block mb-1 drop-shadow-md">Interior Design</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-white font-medium mb-1 drop-shadow-lg">Boutique Hotel Interiors</h3>
+            <p class="text-xs sm:text-sm text-white/95 font-normal line-clamp-2 leading-relaxed drop-shadow-md">Refined tactile textures and timeless minimalist calm.</p>
+          </div>
+        </div>
+
+        <!-- Photo 4: Fine Dining Experiences -->
+        <div class="group relative rounded-2xl overflow-hidden bg-midnight-900 aspect-[4/5] cursor-pointer shadow-xl"
+             onclick="openGalleryModal('Haute Gastronomy & Degustation', 'Private cliffside tasting menus paired with ultra-rare vintage wines in Ravello.', 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=85')">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" 
+               alt="Fine dining table set under soft evening candlelight" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 right-6 z-10 text-white">
+            <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold block mb-1 drop-shadow-md">Sensory Delights</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-white font-medium mb-1 drop-shadow-lg">Fine Dining Experiences</h3>
+            <p class="text-xs sm:text-sm text-white/95 font-normal line-clamp-2 leading-relaxed drop-shadow-md">Intimate candlelit degustations by celebrated chefs.</p>
+          </div>
+        </div>
+
+        <!-- Photo 5: Cultural Architecture -->
+        <div class="group relative rounded-2xl overflow-hidden bg-midnight-900 aspect-[4/5] cursor-pointer shadow-xl"
+             onclick="openGalleryModal('Historic Cultural Architecture', 'Sacred palatial pavilions and intricate riads preserving ancient geometric artistry in Marrakech.', 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=85')">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80" 
+               alt="Intricate historical architectural archway in golden morning light" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+          <div class="absolute inset-0 bg-gradient-to-t from-midnight-950 via-midnight-950/85 via-50% to-transparent"></div>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+          <div class="absolute bottom-6 left-6 right-6 z-10 text-white">
+            <span class="text-xs uppercase tracking-luxury text-champagne-300 font-semibold block mb-1 drop-shadow-md">Heritage &amp; Soul</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-white font-medium mb-1 drop-shadow-lg">Cultural Architecture</h3>
+            <p class="text-xs sm:text-sm text-white/95 font-normal line-clamp-2 leading-relaxed drop-shadow-md">Hand-carved sanctuaries resonant with centuries of devotion.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 9. THE ART OF SLOW TRAVEL ==================== -->
+  <section id="slow-travel" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="relative rounded-3xl overflow-hidden bg-midnight-900 shadow-2xl">
+      
+      <!-- High-Resolution Atmospheric Editorial Background -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2000&q=80" 
+             alt="Calm misty mountain lake surrounded by pine forests at dawn" 
+             class="w-full h-full object-cover object-center filter brightness-75">
+        <div class="absolute inset-0 bg-gradient-to-r from-midnight-950 via-midnight-900/85 to-midnight-900/50"></div>
+      </div>
+
+      <div class="relative z-10 p-8 sm:p-14 lg:p-20 max-w-3xl text-ivory">
+        
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-4">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Editorial Essay</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white mb-6 leading-tight">
+          “Travel Deeper.<br>
+          <span class="italic font-editorial font-light text-champagne">Experience More.”</span>
+        </h2>
+
+        <p class="text-ivory/90 text-base sm:text-lg font-light leading-relaxed mb-10">
+          In an era of rushed itineraries and fleeting photo opportunities, Voyara champions the art of slow, contemplative travel. We invite you to linger, to breathe in the subtle aromas of native pine, to converse with heritage olive growers, and to let a destination reveal its genuine soul.
+        </p>
+
+        <!-- 3 Editorial Highlights -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-champagne/30">
+          <div>
+            <span class="text-champagne font-serif text-xl block mb-2">01</span>
+            <h3 class="font-serif text-base text-white font-medium mb-1">Connect with Local Culture</h3>
+            <p class="text-xs text-ivory/70 font-light leading-relaxed">
+              Step away from crowds into quiet ateliers, multi-generational olive estates, and private tea pavilions.
+            </p>
+          </div>
+
+          <div>
+            <span class="text-champagne font-serif text-xl block mb-2">02</span>
+            <h3 class="font-serif text-base text-white font-medium mb-1">Discover Hidden Places</h3>
+            <p class="text-xs text-ivory/70 font-light leading-relaxed">
+              Venture beyond standard guidebooks to secret coves, hidden mountain passes, and untouched hamlets.
+            </p>
+          </div>
+
+          <div>
+            <span class="text-champagne font-serif text-xl block mb-2">03</span>
+            <h3 class="font-serif text-base text-white font-medium mb-1">Make Every Moment Matter</h3>
+            <p class="text-xs text-ivory/70 font-light leading-relaxed">
+              Unrushed mornings, unhurried dinners, and the luxury of unscripted moments that linger for a lifetime.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 10. WHY TRAVEL WITH VOYARA? ==================== -->
+  <section id="why-voyara" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+        <span class="w-8 h-[1px] bg-champagne"></span>
+        <span>The Voyara Distinction</span>
+        <span class="w-8 h-[1px] bg-champagne"></span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory mb-6">
+        Why Travel with Voyara?
+      </h2>
+      <p class="text-midnight-600 dark:text-ivory/80 text-base sm:text-lg font-light leading-relaxed">
+        We bridge the gap between discerning global curiosity and flawless on-the-ground execution.
+      </p>
+    </div>
+
+    <!-- 4 Value Proposition Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Value 1 -->
+      <div class="p-8 rounded-2xl bg-white dark:bg-midnight-800 border border-champagne/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3">
+            Thoughtfully Curated Destinations
+          </h3>
+          <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+            Every sanctuary and route is personally scouted and vetted. We bypass commercial tourists hubs in favor of rare, transcendent havens.
+          </p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-champagne/15 text-[11px] uppercase tracking-luxury text-champagne font-semibold">
+          Authentic Disclosures
+        </div>
+      </div>
+
+      <!-- Value 2 -->
+      <div class="p-8 rounded-2xl bg-white dark:bg-midnight-800 border border-champagne/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3">
+            Personalized Travel Inspiration
+          </h3>
+          <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+            Every itinerary is drawn from a blank canvas. We take time to understand your passions, palate, and desired balance of serenity and discovery.
+          </p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-champagne/15 text-[11px] uppercase tracking-luxury text-champagne font-semibold">
+          1-on-1 Consultation
+        </div>
+      </div>
+
+      <!-- Value 3 -->
+      <div class="p-8 rounded-2xl bg-white dark:bg-midnight-800 border border-champagne/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3">
+            Distinctive Accommodation Choices
+          </h3>
+          <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+            From secluded private villas with dedicated staff to intimate historic boutique chalets, our property selections honor character over corporate uniformity.
+          </p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-champagne/15 text-[11px] uppercase tracking-luxury text-champagne font-semibold">
+          Verified Aesthetics
+        </div>
+      </div>
+
+      <!-- Value 4 -->
+      <div class="p-8 rounded-2xl bg-white dark:bg-midnight-800 border border-champagne/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-normal text-midnight-800 dark:text-white mb-3">
+            Attention to Every Journey Detail
+          </h3>
+          <p class="text-xs sm:text-sm text-midnight-600 dark:text-ivory/70 font-light leading-relaxed">
+            From private tarmac greetings to customized in-room amenities, our dedicated travel concierge oversees every logistical nuance quietly.
+          </p>
+        </div>
+        <div class="pt-6 mt-6 border-t border-champagne/15 text-[11px] uppercase tracking-luxury text-champagne font-semibold">
+          Seamless Execution
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 11. WORDS FROM FELLOW EXPLORERS ==================== -->
+  <section id="testimonials" class="py-28 bg-midnight-900 text-ivory relative overflow-hidden">
+    <!-- Subtle gold ring emblem watermark -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-3">
+          <span class="w-8 h-[1px] bg-champagne"></span>
+          <span>Sample Guest Chronicles</span>
+          <span class="w-8 h-[1px] bg-champagne"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-white mb-4">
+          Words from Fellow Explorers
+        </h2>
+        <p class="text-ivory/70 text-sm sm:text-base font-light">
+          Illustrative reflections that capture the essence of journeys shaped with poise and personalized care.
+        </p>
+      </div>
+
+      <!-- 3 Testimonial Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-midnight-800/80 border border-white/10 flex flex-col justify-between relative hover:border-champagne/40 transition-colors">
+          <div>
+            <div class="font-editorial text-5xl text-champagne leading-none mb-4">&ldquo;</div>
+            <p class="text-sm sm:text-base text-ivory/90 font-light leading-relaxed italic mb-8">
+              The Riva yacht day along the Amalfi cliffs arranged by Voyara was the singular highlight of our year. Every detail was executed with quiet elegance, from the private cove picnic to the clifftop palazzo suite.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-serif text-champagne font-semibold text-sm">
+              EA
+            </div>
+            <div>
+              <span class="font-serif text-base text-white block">E. &amp; A. Montgomery</span>
+              <span class="text-xs uppercase tracking-luxury text-champagne">Amalfi Coast Signature Journey</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-midnight-800/80 border border-white/10 flex flex-col justify-between relative hover:border-champagne/40 transition-colors">
+          <div>
+            <div class="font-editorial text-5xl text-champagne leading-none mb-4">&ldquo;</div>
+            <p class="text-sm sm:text-base text-ivory/90 font-light leading-relaxed italic mb-8">
+              We experienced Kyoto in a way we never thought possible. Sunrise visits to temple cloisters with zero tourists and private matcha ceremonies gave us a profound stillness that stays with us today.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-serif text-champagne font-semibold text-sm">
+              JL
+            </div>
+            <div>
+              <span class="font-serif text-base text-white block">Dr. Julian Laurent</span>
+              <span class="text-xs uppercase tracking-luxury text-champagne">Kyoto &amp; Hakone Ryokan Odyssey</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-midnight-800/80 border border-white/10 flex flex-col justify-between relative hover:border-champagne/40 transition-colors">
+          <div>
+            <div class="font-editorial text-5xl text-champagne leading-none mb-4">&ldquo;</div>
+            <p class="text-sm sm:text-base text-ivory/90 font-light leading-relaxed italic mb-8">
+              From our timber chalet fireplace in Zermatt to the glass-roof train passing through snowcapped alpine peaks, everything felt bespoke and unhurried. Voyara understands the value of true peace.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-champagne/20 border border-champagne/40 flex items-center justify-center font-serif text-champagne font-semibold text-sm">
+              SC
+            </div>
+            <div>
+              <span class="font-serif text-base text-white block">S. &amp; C. Kensington</span>
+              <span class="text-xs uppercase tracking-luxury text-champagne">Swiss Alpine Winter Retreat</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sample Content Disclosure Note -->
+      <div class="mt-12 text-center">
+        <p class="text-[11px] uppercase tracking-luxury text-ivory/40">
+          *Illustrative explorer notes reflecting our bespoke itinerary and accommodation standards.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 12. PLAN YOUR NEXT ESCAPE (CONSULTATION) ==================== -->
+  <section id="consultation" class="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+      
+      <!-- Left Column: Editorial Invitation & Contact Info -->
+      <div class="lg:col-span-5 flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-2 text-champagne font-medium text-xs uppercase tracking-luxury mb-4">
+            <span class="w-8 h-[1px] bg-champagne"></span>
+            <span>Begin Your Story</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal tracking-tight text-midnight-800 dark:text-ivory mb-6 leading-tight">
+            Your Next Extraordinary Journey Starts Here.
+          </h2>
+
+          <p class="text-midnight-600 dark:text-ivory/80 text-base font-light leading-relaxed mb-8">
+            Tell us what inspires you, and let’s begin shaping a travel experience that feels uniquely yours. Every proposal is crafted individually by a senior journey designer.
+          </p>
+
+          <div class="space-y-6 pt-6 border-t border-champagne/20">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-luxury text-champagne font-semibold block mb-0.5">Private Consultation Desk</span>
+                <span class="text-sm text-midnight-800 dark:text-ivory font-light">journeys@voyara-travel.example</span>
+                <p class="text-[11px] text-midnight-500 dark:text-ivory/50 mt-0.5">Response typically within 24 business hours.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-champagne/15 border border-champagne/40 flex items-center justify-center text-champagne flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs uppercase tracking-luxury text-champagne font-semibold block mb-0.5">Concierge Studio Hours</span>
+                <span class="text-sm text-midnight-800 dark:text-ivory font-light">Monday &ndash; Friday &bull; 09:00 &ndash; 18:00 CET</span>
+                <p class="text-[11px] text-midnight-500 dark:text-ivory/50 mt-0.5">Dedicated 24/7 on-trip assistance provided to all active travelers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Privacy Assurance Note -->
+        <div class="mt-8 p-4 rounded-xl bg-champagne/10 border border-champagne/30 text-[11px] text-midnight-700 dark:text-ivory/70 leading-relaxed">
+          <strong>Privacy Assured:</strong> Your travel preferences and contact details are handled with strict confidentiality and never shared with third parties.
+        </div>
+
+      </div>
+
+      <!-- Right Column: Consultation Form -->
+      <div class="lg:col-span-7">
+        <div class="bg-white dark:bg-midnight-800 border border-champagne/30 rounded-3xl p-8 sm:p-10 shadow-2xl">
+          
+          <form id="consultation-form" onsubmit="event.preventDefault(); submitConsultationForm();" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Full Name -->
+              <div>
+                <label for="consult-name" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Full Name <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="consult-name" required placeholder="e.g. Eleanor Vance" 
+                       class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory placeholder:text-midnight-400 dark:placeholder:text-ivory/30 focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all">
+                <span id="name-error" class="text-[11px] text-rose-500 hidden mt-1">Please enter your full name.</span>
+              </div>
+
+              <!-- Email Address -->
+              <div>
+                <label for="consult-email" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Email Address <span class="text-rose-500">*</span>
+                </label>
+                <input type="email" id="consult-email" required placeholder="e.g. eleanor@vance.com" 
+                       class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory placeholder:text-midnight-400 dark:placeholder:text-ivory/30 focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all">
+                <span id="email-error" class="text-[11px] text-rose-500 hidden mt-1">Please enter a valid email address.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Preferred Destination -->
+              <div>
+                <label for="consult-destination" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Preferred Destination <span class="text-rose-500">*</span>
+                </label>
+                <select id="consult-destination" required class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer">
+                  <option value="" disabled selected>Select Destination</option>
+                  <option value="Amalfi Coast, Italy">Amalfi Coast, Italy</option>
+                  <option value="Kyoto & Hakone, Japan">Kyoto &amp; Hakone, Japan</option>
+                  <option value="Private Atolls, Maldives">Private Atolls, Maldives</option>
+                  <option value="Swiss Alps, Switzerland">Swiss Alps, Switzerland</option>
+                  <option value="Marrakech & Agafay, Morocco">Marrakech &amp; Agafay, Morocco</option>
+                  <option value="Ubud & Uluwatu, Bali">Ubud &amp; Uluwatu, Bali</option>
+                  <option value="Multiple / Open to Recommendation">Multiple / Open to Recommendation</option>
+                </select>
+                <span id="dest-error" class="text-[11px] text-rose-500 hidden mt-1">Please choose a preferred destination.</span>
+              </div>
+
+              <!-- Approximate Travel Date -->
+              <div>
+                <label for="consult-date" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Approximate Travel Date <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="consult-date" required placeholder="e.g. September 2026 or Autumn" 
+                       class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory placeholder:text-midnight-400 dark:placeholder:text-ivory/30 focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all">
+                <span id="date-error" class="text-[11px] text-rose-500 hidden mt-1">Please indicate an approximate travel timeframe.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <!-- Number of Travelers -->
+              <div>
+                <label for="consult-travelers" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Travelers <span class="text-rose-500">*</span>
+                </label>
+                <select id="consult-travelers" required class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer">
+                  <option value="" disabled selected>Party Size</option>
+                  <option value="Solo Traveler">Solo Explorer (1)</option>
+                  <option value="Couple (2)">Couple (2)</option>
+                  <option value="Small Group (3-5)">Small Group (3-5)</option>
+                  <option value="Private Entourage (6+)">Private Entourage (6+)</option>
+                </select>
+                <span id="travelers-error" class="text-[11px] text-rose-500 hidden mt-1">Please select party size.</span>
+              </div>
+
+              <!-- Preferred Travel Style -->
+              <div>
+                <label for="consult-style" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Travel Style <span class="text-rose-500">*</span>
+                </label>
+                <select id="consult-style" required class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer">
+                  <option value="" disabled selected>Style</option>
+                  <option value="Relaxed & Restorative">Relaxed &amp; Restorative</option>
+                  <option value="Cultural & Culinary">Cultural &amp; Culinary</option>
+                  <option value="Active & Adventure">Active &amp; Expedition</option>
+                  <option value="Romantic & Secluded">Romantic &amp; Secluded</option>
+                </select>
+                <span id="style-error" class="text-[11px] text-rose-500 hidden mt-1">Please select travel style.</span>
+              </div>
+
+              <!-- Estimated Budget -->
+              <div>
+                <label for="consult-budget" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                  Est. Budget <span class="text-rose-500">*</span>
+                </label>
+                <select id="consult-budget" required class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all cursor-pointer">
+                  <option value="" disabled selected>Budget Range</option>
+                  <option value="$10,000 - $25,000">$10k &ndash; $25k</option>
+                  <option value="$25,000 - $50,000">$25k &ndash; $50k</option>
+                  <option value="$50,000+">$50,000+ (Ultra-Luxury)</option>
+                </select>
+                <span id="budget-error" class="text-[11px] text-rose-500 hidden mt-1">Please select budget tier.</span>
+              </div>
+            </div>
+
+            <!-- Additional Preferences -->
+            <div>
+              <label for="consult-notes" class="block text-xs uppercase tracking-luxury font-medium text-midnight-800 dark:text-ivory mb-2">
+                Additional Travel Preferences &amp; Wishes
+              </label>
+              <textarea id="consult-notes" rows="3" placeholder="Tell us about special occasions, dietary desires, private charter preferences, or specific stays you wish to include..." 
+                        class="w-full px-4 py-3 rounded-xl bg-ivory-50 dark:bg-midnight-900 border border-champagne/30 text-xs text-midnight-800 dark:text-ivory placeholder:text-midnight-400 dark:placeholder:text-ivory/30 focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne transition-all"></textarea>
+            </div>
+
+            <!-- Submit Button & State -->
+            <div>
+              <button id="consultation-submit-btn" type="submit" class="w-full py-4 rounded-full text-xs font-semibold uppercase tracking-luxury bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all duration-300 shadow-xl shadow-champagne/25 flex items-center justify-center gap-2">
+                <span>Request a Travel Consultation</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+            </div>
+
+            <!-- Realistic Honest Submission Feedback Banner -->
+            <div id="consultation-response-state" class="hidden p-5 rounded-2xl border transition-all duration-500 text-xs">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER: THE VOYARA SIGNATURE ==================== -->
+  <footer class="voyara-footer pt-20 pb-12 relative overflow-hidden">
+    <!-- Subtle gold watermark background emblem -->
+    <div class="hidden sm:block absolute -right-24 -bottom-24 w-96 h-96 opacity-[0.03] pointer-events-none">
+      <svg viewBox="0 0 100 100" class="w-full h-full text-champagne" fill="currentColor">
+        <polygon points="50,5 62,38 95,50 62,62 50,95 38,62 5,50 38,38"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+      
+      <!-- Top Section: Brand Column + Navigation Columns + Newsletter -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        
+        <!-- Primary Brand Column (Prominent Website Name & Logo) -->
+        <div class="lg:col-span-4">
+          <!-- Official VOYARA Logo and Website Name -->
+          <a href="#hero" class="inline-flex items-center gap-3.5 mb-6 group" aria-label="VOYARA Home">
+            <div class="relative w-12 h-12 flex items-center justify-center flex-shrink-0">
+              <svg class="w-12 h-12 text-champagne transform group-hover:rotate-45 transition-transform duration-700 ease-out" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="22" stroke="#D6B887" stroke-width="1.3" stroke-dasharray="3 2" class="opacity-80"/>
+                <path d="M24 6L28.5 19.5L42 24L28.5 28.5L24 42L19.5 28.5L6 24L19.5 19.5Z" fill="#D6B887"/>
+                <circle cx="24" cy="24" r="3.5" fill="#F5F0E8"/>
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-serif text-3xl tracking-luxury font-semibold text-white">VOYARA</span>
+              <span class="text-[10px] uppercase tracking-[0.32em] text-champagne font-medium -mt-1">Luxury Voyages</span>
+            </div>
+          </a>
+
+          <p class="text-ivory/80 text-sm font-light leading-relaxed max-w-sm mb-6">
+            VOYARA curates bespoke voyages, rare boutique sanctuaries, and transformative adventures designed for discerning global travelers seeking extraordinary discoveries.
+          </p>
+
+          <!-- Contact Information Placeholders -->
+          <div class="space-y-2.5 mb-8 text-xs font-light text-ivory/80">
+            <div class="flex items-center gap-3">
+              <span class="text-champagne font-medium uppercase tracking-luxury text-[10px] w-20 flex-shrink-0">Inquiries:</span>
+              <span class="text-ivory">journeys@voyara-travel.example</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-champagne font-medium uppercase tracking-luxury text-[10px] w-20 flex-shrink-0">Studio Desk:</span>
+              <span class="text-ivory">Mon &ndash; Fri &bull; 09:00 &ndash; 18:00 CET</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-champagne font-medium uppercase tracking-luxury text-[10px] w-20 flex-shrink-0">Concierge:</span>
+              <span class="text-ivory">24/7 Global On-Journey Assistance</span>
+            </div>
+          </div>
+
+          <!-- Social Icons (Identifiable SVG Icons) -->
+          <div class="flex items-center gap-3.5">
+            <span class="text-[10px] uppercase tracking-luxury text-champagne mr-1 font-medium">Follow Journal:</span>
+            <!-- Instagram -->
+            <a href="#hero" class="w-9 h-9 rounded-full border border-champagne/30 text-champagne hover:bg-champagne hover:text-midnight-900 flex items-center justify-center transition-all shadow-sm" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="#hero" class="w-9 h-9 rounded-full border border-champagne/30 text-champagne hover:bg-champagne hover:text-midnight-900 flex items-center justify-center transition-all shadow-sm" aria-label="Pinterest">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.332 1.357-.053.211-.174.257-.402.156-1.503-.699-2.441-2.894-2.441-4.657 0-3.792 2.756-7.276 7.945-7.276 4.17 0 7.411 2.972 7.411 6.944 0 4.144-2.612 7.479-6.237 7.479-1.219 0-2.365-.634-2.757-1.382l-.749 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#hero" class="w-9 h-9 rounded-full border border-champagne/30 text-champagne hover:bg-champagne hover:text-midnight-900 flex items-center justify-center transition-all shadow-sm" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Columns (5 Cols) -->
+        <div class="lg:col-span-4 grid grid-cols-2 gap-6 text-xs font-light">
+          <!-- Column: Voyages & Havens -->
+          <div>
+            <h4 class="font-serif text-sm uppercase tracking-luxury text-champagne font-medium mb-4">Voyages &amp; Havens</h4>
+            <ul class="space-y-2.5 text-ivory/80">
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Amalfi Coast, Italy</a></li>
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Kyoto, Japan</a></li>
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Maldives Atolls</a></li>
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Swiss Alps, Switzerland</a></li>
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Marrakech, Morocco</a></li>
+              <li><a href="#destinations" class="hover:text-champagne transition-colors">Bali, Indonesia</a></li>
+            </ul>
+          </div>
+
+          <!-- Column: Experiences & Studio -->
+          <div>
+            <h4 class="font-serif text-sm uppercase tracking-luxury text-champagne font-medium mb-4">Experiences &amp; Stays</h4>
+            <ul class="space-y-2.5 text-ivory/80">
+              <li><a href="#experiences" class="hover:text-champagne transition-colors">Private Island Retreats</a></li>
+              <li><a href="#experiences" class="hover:text-champagne transition-colors">Epicurean Journeys</a></li>
+              <li><a href="#experiences" class="hover:text-champagne transition-colors">Wilderness Expeditions</a></li>
+              <li><a href="#stays" class="hover:text-champagne transition-colors">Overwater Atoll Villas</a></li>
+              <li><a href="#stays" class="hover:text-champagne transition-colors">Cliffside Palazzos</a></li>
+              <li><a href="#consultation" class="hover:text-champagne transition-colors font-medium text-champagne">Plan Your Journey &rarr;</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription Column (3 Cols) -->
+        <div class="lg:col-span-4 flex flex-col justify-center">
+          <div class="p-6 sm:p-7 rounded-2xl bg-midnight-900/80 border border-champagne/30 shadow-xl">
+            <span class="text-xs uppercase tracking-luxury text-champagne font-semibold block mb-2">The Private Dispatch</span>
+            <h3 class="font-serif text-lg sm:text-xl text-white font-normal mb-2">
+              Receive Curated Destination Inquiries
+            </h3>
+            <p class="text-xs text-ivory/80 font-light leading-relaxed mb-5">
+              Discreet boutique openings, private island availability, and seasonal travel inspiration from VOYARA.
+            </p>
+            
+            <form id="newsletter-form" onsubmit="event.preventDefault(); submitNewsletter();" class="flex flex-col gap-3">
+              <input type="email" id="newsletter-email" required placeholder="Enter private email address" 
+                     class="w-full px-4 py-3 rounded-xl bg-midnight-800 border border-champagne/40 text-xs text-white placeholder:text-ivory/40 focus:outline-none focus:border-champagne transition-all">
+              <button type="submit" class="w-full py-3 rounded-xl text-xs font-semibold uppercase tracking-luxury bg-champagne text-midnight-900 hover:bg-champagne-300 transition-all shadow-lg">
+                Subscribe to Dispatch
+              </button>
+            </form>
+
+            <span id="newsletter-feedback" class="text-[11px] block mt-2 text-champagne hidden"></span>
+            <p class="text-[10px] text-ivory/50 mt-3">
+              *Requires mail service integration for live delivery. Unsubscribe anytime.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Signature & Copyright Strip -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-ivory/70 gap-6">
+        
+        <!-- Bottom Copyright Notice -->
+        <div class="text-[11px] text-ivory/60">
+          &copy; <span id="current-year"></span> VOYARA Luxury Travel. All Rights Reserved. Single-Page Showcase Edition.
+        </div>
+
+        <!-- Quick Return to Top & Legal Links -->
+        <div class="flex items-center gap-6 text-[11px] text-ivory/60">
+          <a href="#hero" class="hover:text-champagne transition-colors">Privacy Policy</a>
+          <a href="#hero" class="hover:text-champagne transition-colors">Terms of Curation</a>
+          <a href="#hero" class="hover:text-champagne transition-colors">Editorial Standards</a>
+          <a href="#hero" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-champagne/40 bg-midnight-900/60 hover:bg-champagne hover:text-midnight-900 text-champagne text-[11px] uppercase tracking-luxury font-medium transition-all group shadow-sm" aria-label="Back to Top">
+            <span>Back to Top</span>
+            <div class="w-4 h-4 rounded-full bg-champagne/20 group-hover:bg-midnight-900/20 flex items-center justify-center transition-colors">
+              <svg class="w-2.5 h-2.5 transform group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==================== MODALS (Interactive overlays) ==================== -->
+  
+  <!-- Universal Modal Backdrop -->
+  <div id="universal-modal" class="fixed inset-0 z-50 bg-midnight-950/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+    <div id="modal-container" class="bg-white dark:bg-midnight-800 border border-champagne/30 text-midnight-800 dark:text-ivory max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl transform transition-all duration-300 max-h-[90vh] flex flex-col">
+      <!-- Modal Header Image -->
+      <div class="relative h-60 sm:h-72 w-full overflow-hidden flex-shrink-0">
+        <img id="modal-image" src="" alt="Voyara Detail View" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+        <button onclick="closeUniversalModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/60 text-white hover:text-champagne flex items-center justify-center backdrop-blur-md transition-colors" aria-label="Close Modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="absolute bottom-4 left-6 right-6 text-white">
+          <span id="modal-badge" class="text-[10px] uppercase tracking-luxury text-champagne font-semibold block mb-1"></span>
+          <h3 id="modal-title" class="font-serif text-2xl sm:text-3xl font-normal text-white"></h3>
+        </div>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 flex-grow">
+        <p id="modal-description" class="text-xs sm:text-sm text-midnight-700 dark:text-ivory/80 leading-relaxed font-light"></p>
+        
+        <!-- Highlights/Itinerary Container -->
+        <div id="modal-extra-content" class="space-y-3"></div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-6 border-t border-champagne/20 flex flex-col sm:flex-row items-center justify-between gap-4 bg-ivory-50 dark:bg-midnight-900/60">
+        <span class="text-xs text-midnight-500 dark:text-ivory/60 font-light">Customizable to your specific timing &amp; preferences.</span>
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <button onclick="closeUniversalModal()" class="px-5 py-2.5 rounded-full border border-midnight-800/20 dark:border-ivory/20 text-xs uppercase tracking-luxury hover:border-champagne hover:text-champagne transition-all w-full sm:w-auto">
+            Close
+          </button>
+          <a href="#consultation" onclick="closeUniversalModal()" class="px-6 py-2.5 rounded-full bg-champagne text-midnight-900 text-xs font-semibold uppercase tracking-luxury hover:bg-champagne-300 transition-all text-center w-full sm:w-auto">
+            Inquire Journey
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Gallery Lightbox Modal -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-50 bg-midnight-950/95 backdrop-blur-lg hidden items-center justify-center p-4 transition-opacity duration-300" onclick="closeGalleryModal()">
+    <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+      <button onclick="closeGalleryModal()" class="absolute -top-12 right-0 text-white hover:text-champagne p-2" aria-label="Close Lightbox">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div class="rounded-2xl overflow-hidden shadow-2xl border border-champagne/30 bg-black">
+        <img id="lightbox-image" src="" alt="Voyara Gallery Fullscreen" class="max-h-[75vh] w-full object-contain mx-auto">
+      </div>
+      <div class="mt-4 text-center">
+        <h3 id="lightbox-title" class="font-serif text-xl sm:text-2xl text-white font-normal mb-1"></h3>
+        <p id="lightbox-desc" class="text-xs text-ivory/70 max-w-xl mx-auto font-light"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back-to-Top Button -->
+  <button id="floating-back-to-top" 
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+          class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-midnight-900/90 border border-champagne/40 text-champagne hover:bg-champagne hover:text-midnight-900 flex items-center justify-center shadow-2xl backdrop-blur-md transition-all duration-300 opacity-0 pointer-events-none translate-y-4 hover:-translate-y-1 group" 
+          aria-label="Back to Top">
+    <svg class="w-5 h-5 transform group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>
